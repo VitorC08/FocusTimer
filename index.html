@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./js/main.js" defer></script>
+    <title>FocusTimer</title>
+</head>
+<body>
+    <header>
+        <div id="toggle-mode">
+            <i class="ph ph-moon"></i>
+            <i class="ph ph-sun"></i>
+        </div>
+    </header>
+    <main>
+        <section id="timer-area">
+            <div id="timer">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </div>
+            <div id="controls">
+                <button class="ph ph-play-circle" data-action="toggleRunning">
+                    <span class="sr-only">button play</span>
+                </button>
+                <button class="ph ph-pause-circle" data-action="toggleRunning">
+                    <span class="sr-only">button pause</span>
+                </button>
+                <button class="ph ph-stop-circle" data-action="reset">
+                    <span class="sr-only">button pause</span>
+                </button>
+                <button id="plus" class="ph ph-plus-circle"  data-action="increaseFiveMinutes">
+                    <span class="sr-only">button plus timer</span>
+                </button>
+                <button id="minus" class="ph ph-minus-circle" data-action="decreaseFiveMinutes">
+                    <span class="sr-only">button minus timer</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="cards-area">
+            <div id="forest" class=" card ph ph-tree"></div>
+            <div id="rain" class=" card ph ph-cloud-rain"></div>
+            <div id="coffeeshop" class=" card ph ph-coffee"></div>
+            <div id="bonfire" class=" card ph ph-campfire"></div>
+        </section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,10 @@
+export const controls = document.getElementById('controls')
+export const cardForest = document.getElementById('forest')
+export const cardRain = document.getElementById('rain')
+export const cardBonfire = document.getElementById('bonfire')
+export const cardCoffeeshop = document.getElementById('coffeeshop')
+export const minutes = document.getElementById('minutes')
+export const seconds = document.getElementById('seconds')
+export const plus = document.getElementById('plus')
+export const minus = document.getElementById('minus')
+

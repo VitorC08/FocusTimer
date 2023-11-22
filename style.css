@@ -1,0 +1,125 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --bg-color:hsl(0, 0%, 90%);
+    --txt-color: hsl(240, 6%, 21%);
+    --bg-card: hsl(240, 9%, 89%);
+    --bg-active: hsl(194, 97%, 31%);
+    
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    transition: background .3s ease-in-out;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+html.dark{
+    --bg-color: hsl(0, 0%, 0%);
+    --txt-color: hsl(0, 0%, 90%);
+    --bg-card: hsl(240, 6%, 21%);
+}
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun{
+    display: none;
+}
+
+#toggle-mode{
+    font-size: clamp(3rem, 2.537rem + 1.951vw, 4rem);
+    font-weight: bold;
+    position: absolute;
+    top: 3.6rem;
+    right: 3.6rem;
+    color: var(--txt-color);
+    cursor: pointer;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 19rem;
+}
+
+#timer{
+    font-size: clamp(6.3rem, 3.38rem + 12.293vw, 12.6rem);
+    color: var(--txt-color);
+    display: flex;
+}
+
+#controls{
+    display: flex;
+    gap: clamp(1.6rem, 0.488rem + 4.683vw, 4rem);
+}
+
+#controls button{
+    background: transparent;
+    font-size: clamp(2.8rem, 1.873rem + 3.902vw, 4.8rem);
+    gap: 4rem;
+    border: none;
+    cursor: pointer;
+    color: var(--txt-color);
+}
+
+#cards-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: clamp(1.8rem, 1.151rem + .732vw, 3.2rem);
+}
+
+.card{
+    font-size: clamp(2.8rem, 1.78rem + 4.293vw, 5rem);
+    color: var(--txt-color);
+    padding: clamp(3rem, 2.212rem + 3.317vw, 4.7rem);
+    border-radius: 2.4rem;
+    background-color: var(--bg-card);
+    cursor: pointer;
+
+}
+
+.active{
+    background-color: var(--bg-active);
+    color: hsl(0, 0%, 90%);
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle{
+    display: none;
+}
+
+@media (max-width: 820px) {
+    main{
+        flex-direction: column;
+        gap: 4rem;
+    }
+    
+    #toggle-mode{
+        top: 2rem;
+        right: 2rem;
+    }
+}
