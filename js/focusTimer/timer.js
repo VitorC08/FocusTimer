@@ -4,6 +4,9 @@ import * as actions from "./actions.js";
 import { kitchenSound as kitchenSound } from "./sounds.js";
 
 export function countdown() {
+
+  clearTimeout(state.coutntdownId)
+
   if (!state.isRunning) {
     return;
   }
@@ -29,7 +32,7 @@ export function countdown() {
 
   updateDisplay(minutes, seconds);
 
-  setTimeout(() => countdown(), 1000);
+  state.coutntdownId = setTimeout(() => countdown(), 1000);
 }
 
 plus.addEventListener("click", actions.increaseFiveMinutes);
